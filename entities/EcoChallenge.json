@@ -1,0 +1,47 @@
+{
+  "name": "EcoChallenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Challenge title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Challenge description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "travel",
+        "food",
+        "electricity",
+        "general"
+      ],
+      "description": "Challenge category"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "skipped"
+      ],
+      "default": "active",
+      "description": "Challenge status"
+    },
+    "target_days": {
+      "type": "number",
+      "description": "Number of days for the challenge"
+    },
+    "progress_days": {
+      "type": "number",
+      "default": 0,
+      "description": "Days completed"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
